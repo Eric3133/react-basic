@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+// 项目的根组件
 
+// app -> index,js -> public/index.html -> root div
+
+// const count = 100;
+// function getName(){
+//   return "Eric"
+// }
+const list = [
+  {id: 1, name: 'Eric'},
+  {id: 2, name: 'Tom'},
+  {id: 3, name: 'Jerry'}
+]
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     this is app
+     {/* {'this is message'}
+     {count}
+     {getName()}
+     {new Date().getDate()}
+     <div style={{color: "red"}}>this is div</div> */}
+     <ul>
+      {list.map(item => <li key={item.id}>{item.name}</li>)}
+     </ul>
     </div>
   );
 }
